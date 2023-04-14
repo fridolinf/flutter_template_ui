@@ -1,5 +1,6 @@
 import 'package:elearning_app/constants/colors.dart';
 import 'package:elearning_app/models/course.dart';
+import 'package:elearning_app/screens/detail/detail.dart';
 import 'package:flutter/material.dart';
 
 class CourseSection extends StatelessWidget {
@@ -107,7 +108,12 @@ class CourseSection extends StatelessWidget {
                   elevation: 0,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15))),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => DetailPage(
+                          courseData: course,
+                        )));
+              },
               child: Text("Start"),
             ),
           ),
