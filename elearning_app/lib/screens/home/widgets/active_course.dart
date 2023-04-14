@@ -8,17 +8,24 @@ class ActiveCourse extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       child: Column(
         children: [
           const CategoryTitle(
               leftText: "Currently Active", rightText: "view all"),
           Container(
-            margin: const EdgeInsets.only(right: 25, left: 25, top: 15),
+            margin: const EdgeInsets.only(
+              right: 25,
+              left: 25,
+              top: 15,
+            ),
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
-              color: kFontLight.withOpacity(0.1),
-              border: Border.all(color: kFontLight.withOpacity(0.3), width: 1),
+              color: ccFontLight.withOpacity(0.1),
+              border: Border.all(
+                color: ccFontLight.withOpacity(0.3),
+                width: 1,
+              ),
               borderRadius: BorderRadius.circular(8),
             ),
             child: Row(
@@ -44,7 +51,7 @@ class ActiveCourse extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
-                            color: kFont,
+                            color: ccFont,
                           ),
                         ),
                         Text(
@@ -52,7 +59,7 @@ class ActiveCourse extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
-                            color: kFontLight,
+                            color: ccFontLight,
                           ),
                         ),
                       ],
@@ -69,7 +76,7 @@ class ActiveCourse extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  progressColor: kAccent,
+                  progressColor: ccAccent,
                 )
               ],
             ),

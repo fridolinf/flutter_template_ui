@@ -11,10 +11,19 @@ class EmojiText extends StatelessWidget {
       child: RichText(
         text: const TextSpan(children: [
           TextSpan(
-              text: "Let\s boost your\n brain power",
-              style: TextStyle(
-                  color: kFont, fontWeight: FontWeight.bold, fontSize: 26)),
-          TextSpan(text: "✨", style: TextStyle(fontSize: 26)),
+            text: "Let's boost your\n brain power",
+            style: TextStyle(
+              color: ccFont,
+              fontWeight: FontWeight.bold,
+              fontSize: 26,
+            ),
+          ),
+          TextSpan(
+            text: "✨",
+            style: TextStyle(
+              fontSize: 26,
+            ),
+          ),
         ]),
       ),
     );

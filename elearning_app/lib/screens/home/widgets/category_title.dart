@@ -19,12 +19,18 @@ class CategoryTitle extends StatelessWidget {
           Text(
             leftText,
             style: const TextStyle(
-                fontWeight: FontWeight.bold, fontSize: 20, color: kFont),
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+              color: ccFont,
+            ),
           ),
           Text(
             rightText,
             style: const TextStyle(
-                fontWeight: FontWeight.bold, fontSize: 14, color: kFontLight),
+              fontWeight: FontWeight.bold,
+              fontSize: 14,
+              color: ccFontLight,
+            ),
           ),
         ],
       ),

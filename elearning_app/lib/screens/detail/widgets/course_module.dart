@@ -70,13 +70,13 @@ class CourseModule extends StatelessWidget {
                       Text(
                         module.title,
                         style: const TextStyle(
-                          color: kFontLight,
+                          color: ccFontLight,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       const Icon(
                         Icons.more_horiz,
-                        color: kFontLight,
+                        color: ccFontLight,
                       ),
                     ],
                   ),
@@ -87,7 +87,7 @@ class CourseModule extends StatelessWidget {
                     module.description,
                     style: TextStyle(
                       fontSize: 18,
-                      color: kFont.withOpacity(0.7),
+                      color: ccFont.withOpacity(0.7),
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -118,6 +118,16 @@ class CourseModule extends StatelessWidget {
     );
   }
 
+  /// This function returns a container with a button-like appearance, containing an icon and text.
+  ///
+  /// Args:
+  ///   icon (IconData): Icon to be displayed in the button, represented by an IconData object.
+  ///   text (String): A string that represents the text to be displayed on the button.
+  ///
+  /// Returns:
+  ///   A container widget with a row of an icon and text inside it. The icon and text are passed as
+  /// parameters to the function. The container has a decoration with a background color and a border
+  /// radius.
   _buildButton(IconData icon, String text) {
     return Container(
       padding: const EdgeInsets.all(5),

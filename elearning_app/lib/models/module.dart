@@ -30,32 +30,36 @@ class Module {
     this.lesson,
   );
 
+  /// The function generates a list of Module objects with different properties.
+  ///
+  /// Returns:
+  ///   A list of two Module objects.
   static List<Module> generateModule() {
     return [
       Module(
-          kAccent,
-          kAccent,
+          ccAccent,
+          ccAccent,
           Colors.white,
           Icons.play_arrow_rounded,
           "Module 1",
           "Basic Plant Technologies",
-          kPrimaryLight,
-          kPrimaryLight,
-          kPrimary,
-          kPrimaryDark,
+          ccPrimaryLight,
+          ccPrimaryLight,
+          ccPrimary,
+          ccPrimaryDark,
           "22 min",
           "15 lessons"),
       Module(
-          kAccent.withOpacity(0.3),
-          kAccent.withOpacity(0.3),
+          ccAccent.withOpacity(0.3),
+          ccAccent.withOpacity(0.3),
           Colors.white,
           Icons.lock,
           "Module 2",
           "Intermidate Plant Technologies",
-          kPrimaryLight.withOpacity(0.5),
-          kPrimaryLight.withOpacity(0.5),
-          kPrimary,
-          kPrimaryDark,
+          ccPrimaryLight.withOpacity(0.5),
+          ccPrimaryLight.withOpacity(0.5),
+          ccPrimary,
+          ccPrimaryDark,
           "5 hours",
           "7 lessons"),
     ];

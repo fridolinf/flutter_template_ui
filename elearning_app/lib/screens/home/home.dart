@@ -31,7 +31,7 @@ class HomePage extends StatelessWidget {
   BottomNavigationBar _buildBottomNavigationBar() {
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
-      backgroundColor: kBackground,
+      backgroundColor: ccBackground,
       showSelectedLabels: false,
       showUnselectedLabels: false,
       items: [
@@ -42,7 +42,7 @@ class HomePage extends StatelessWidget {
             decoration: const BoxDecoration(
               border: Border(
                 bottom: BorderSide(
-                  color: kAccent,
+                  color: ccAccent,
                   width: 2,
                 ),
               ),
@@ -82,14 +82,14 @@ class HomePage extends StatelessWidget {
 
   AppBar _buildAppBarWidget() {
     return AppBar(
-      backgroundColor: kBackground,
+      backgroundColor: ccBackground,
       elevation: 0,
       centerTitle: false,
       title: const Padding(
         padding: EdgeInsets.only(left: 10),
         child: Text("Hello Frelly!"),
       ),
-      titleTextStyle: const TextStyle(color: kFontLight, fontSize: 16),
+      titleTextStyle: const TextStyle(color: ccFontLight, fontSize: 16),
       actions: [
         Stack(
           children: [
@@ -98,7 +98,7 @@ class HomePage extends StatelessWidget {
               margin: const EdgeInsets.only(right: 20, top: 10),
               decoration: BoxDecoration(
                   border: Border.all(
-                    color: kFontLight.withOpacity(0.3),
+                    color: ccFontLight.withOpacity(0.3),
                     width: 2,
                   ),
                   borderRadius: BorderRadius.circular(15)),
@@ -114,7 +114,7 @@ class HomePage extends StatelessWidget {
                 height: 8,
                 width: 8,
                 decoration: const BoxDecoration(
-                  color: kAccent,
+                  color: ccAccent,
                   shape: BoxShape.circle,
                 ),
               ),

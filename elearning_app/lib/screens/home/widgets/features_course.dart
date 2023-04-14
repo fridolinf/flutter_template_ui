@@ -23,7 +23,11 @@ class FeaturesCourse extends StatelessWidget {
               itemBuilder: (context, index) => CourseSection(
                 course: coursesList[index],
               ),
-              separatorBuilder: (BuildContext context, index) => const SizedBox(
+              separatorBuilder: (
+                BuildContext context,
+                index,
+              ) =>
+                  const SizedBox(
                 width: 15,
               ),
             ),

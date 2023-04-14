@@ -36,14 +36,14 @@ class CourseDescription extends StatelessWidget {
                 height: 5,
                 width: 5,
                 decoration: const BoxDecoration(
-                  color: kFontLight,
+                  color: ccFontLight,
                   shape: BoxShape.circle,
                 ),
               ),
               const Icon(
                 Icons.access_time_filled,
                 size: 20,
-                color: kAccent,
+                color: ccAccent,
               ),
               const SizedBox(
                 width: 5,
@@ -53,7 +53,7 @@ class CourseDescription extends StatelessWidget {
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 16,
-                  color: kFont,
+                  color: ccFont,
                 ),
               )
             ],
@@ -66,7 +66,7 @@ class CourseDescription extends StatelessWidget {
             style: const TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 20,
-              color: kFont,
+              color: ccFont,
             ),
           ),
           const SizedBox(
@@ -77,7 +77,7 @@ class CourseDescription extends StatelessWidget {
             style: TextStyle(
               wordSpacing: 2,
               fontWeight: FontWeight.bold,
-              color: kFontLight,
+              color: ccFontLight,
               fontSize: 14,
             ),
           ),

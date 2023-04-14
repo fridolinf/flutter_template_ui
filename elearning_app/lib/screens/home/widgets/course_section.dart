@@ -12,14 +12,14 @@ class CourseSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       child: Stack(
         children: [
           Container(
             height: 250,
             width: 250,
             decoration: BoxDecoration(
-              color: kPrimaryLight,
+              color: ccPrimaryLight,
               borderRadius: BorderRadius.circular(20),
             ),
             child: Column(
@@ -72,7 +72,7 @@ class CourseSection extends StatelessWidget {
                               style: const TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 15,
-                                color: kFont,
+                                color: ccFont,
                               ),
                             ),
                             SizedBox(
@@ -84,7 +84,7 @@ class CourseSection extends StatelessWidget {
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 12,
-                                      color: kFontLight,
+                                      color: ccFontLight,
                                     ),
                                   ),
                                 ],
@@ -104,17 +104,20 @@ class CourseSection extends StatelessWidget {
             right: 20,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                  backgroundColor: kAccent,
+                  backgroundColor: ccAccent,
                   elevation: 0,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15))),
               onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
+                Navigator.of(context).push(
+                  MaterialPageRoute(
                     builder: (context) => DetailPage(
-                          courseData: course,
-                        )));
+                      courseData: course,
+                    ),
+                  ),
+                );
               },
-              child: Text("Start"),
+              child: const Text("Start"),
             ),
           ),
         ],
