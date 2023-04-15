@@ -50,7 +50,7 @@ class DetailPage extends StatelessWidget {
                     color: Colors.white,
                     child: const Center(
                       child: Text(
-                        'No task tody',
+                        'No task today',
                         style: TextStyle(color: Colors.grey, fontSize: 18),
                       ),
                     ),
