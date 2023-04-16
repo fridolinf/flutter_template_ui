@@ -83,10 +83,26 @@ class TaskTimeline extends StatelessWidget {
           /// `afterLineStyle` property is used to customize the appearance of the line after the
           /// timeline indicator.
           TimelineTile(
+        /// `alignment: TimelineAlign.manual` is setting the alignment of the `TimelineTile` to be
+        /// manually determined by the `lineXY` property. This means that the position of the tile in
+        /// the timeline will not be automatically determined based on the order of the tiles, but
+        /// rather by the value of `lineXY`.
         alignment: TimelineAlign.manual,
+
+        /// `lineXY: 0` is setting the position of the `TimelineTile` in the timeline. In this case, it
+        /// is setting the position to be at the beginning of the timeline, which is represented by the
+        /// leftmost side of the `TaskTimeline` widget. By setting `lineXY` to 0, the `TimelineTile`
+        /// will be aligned with the left edge of the `TaskTimeline` widget.
         lineXY: 0,
+
+        /// `isFirst: true` is setting the `TimelineTile` to be the first tile in the timeline. This
+        /// affects the appearance of the timeline by indicating that this tile should not have a line
+        /// before it, since it is the first tile.
         isFirst: true,
         indicatorStyle: IndicatorStyle(
+          /// `indicatorXY: 0` is setting the position of the timeline indicator within the
+          /// `TimelineTile`. In this case, it is setting the position to be at the beginning of the
+          /// `TimelineTile`, which is aligned with the left edge of the `TaskTimeline` widget.
           indicatorXY: 0,
           width: 15,
           indicator: Container(

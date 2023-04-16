@@ -34,8 +34,9 @@ class _DatePickerState extends State<DatePicker> {
             padding: const EdgeInsets.all(10),
             margin: const EdgeInsets.symmetric(horizontal: 4),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: selected == index ? Colors.grey.withOpacity(0.1) : null),
+              borderRadius: BorderRadius.circular(20),
+              color: selected == index ? Colors.grey.withOpacity(0.1) : null,
+            ),
             child: Column(
               children: [
                 Text(

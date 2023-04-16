@@ -13,7 +13,14 @@ class Tasks extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 15),
       child: GridView.builder(
         itemCount: tasksList.length,
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate:
+
+            /// `SliverGridDelegateWithFixedCrossAxisCount` is a delegate used by
+            /// `GridView` to control the layout of its children. In this case, it is
+            /// creating a grid with a fixed number of columns (`crossAxisCount: 2`) and
+            /// setting the spacing between columns to 15 pixels (`crossAxisSpacing:
+            /// 15`) and the spacing between rows to 20 pixels (`mainAxisSpacing: 20`).
+            const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           crossAxisSpacing: 15,
           mainAxisSpacing: 20,

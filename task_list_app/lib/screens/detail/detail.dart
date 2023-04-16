@@ -107,7 +107,10 @@ class DetailPage extends StatelessWidget {
             const SizedBox(height: 5),
             Text(
               'You have ${task.left} tasks for today!',
-              style: TextStyle(fontSize: 12, color: Colors.grey[700]),
+              style: TextStyle(
+                fontSize: 12,
+                color: Colors.grey[700],
+              ),
             ),
           ],
         ),

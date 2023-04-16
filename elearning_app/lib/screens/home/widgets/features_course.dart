@@ -13,7 +13,9 @@ class FeaturesCourse extends StatelessWidget {
       child: Column(
         children: [
           const CategoryTitle(
-              leftText: "Top of the week", rightText: "view all"),
+            leftText: "Top of the week",
+            rightText: "view all",
+          ),
           SizedBox(
             height: 300,
             child: ListView.separated(

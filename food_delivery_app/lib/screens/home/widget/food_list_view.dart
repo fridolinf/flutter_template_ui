@@ -17,7 +17,17 @@ class FoodListView extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 25),
       child: PageView(
+        /// `controller: pageController` is setting the `PageController` for the `PageView` widget. This
+        /// allows the user to swipe left or right to navigate between the different categories of food
+        /// items. The `onPageChanged` callback function is also set to `callback`, which is called
+        /// whenever the user swipes to a new page.
         controller: pageController,
+
+        /// `onPageChanged: (index) => callback(index)` is setting the `onPageChanged` callback function
+        /// for the `PageView` widget. This function is called whenever the user swipes to a new page,
+        /// and it takes the index of the new page as an argument. The `callback` function passed to the
+        /// `FoodListView` widget is then called with this index as an argument, allowing the parent
+        /// widget to update its state based on the selected page.
         onPageChanged: (index) => callback(index),
         children:
 
