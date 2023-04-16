@@ -7,11 +7,11 @@ import 'package:food_delivery_app/widgets/custom_app_bar.dart';
 
 class DetailPage extends StatelessWidget {
   final Food food;
-  DetailPage(this.food);
+  const DetailPage(this.food, {super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kPrimaryColor,
+      backgroundColor: ccPrimaryColor,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -25,11 +25,11 @@ class DetailPage extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: Container(
+      floatingActionButton: SizedBox(
         width: 100,
         height: 56,
         child: RawMaterialButton(
-          fillColor: kPrimaryColor,
+          fillColor: ccPrimaryColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(50),
           ),
@@ -37,20 +37,20 @@ class DetailPage extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Icon(
+              const Icon(
                 Icons.shopping_bag_outlined,
                 color: Colors.black,
                 size: 30,
               ),
               Container(
-                padding: EdgeInsets.all(15),
-                decoration: BoxDecoration(
+                padding: const EdgeInsets.all(15),
+                decoration: const BoxDecoration(
                   color: Colors.white,
                   shape: BoxShape.circle,
                 ),
                 child: Text(
                   food.quantity.toString(),
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.black,
                     fontSize: 18,
                     fontWeight: FontWeight.bold,

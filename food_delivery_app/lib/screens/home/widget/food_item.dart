@@ -4,8 +4,7 @@ import 'package:food_delivery_app/models/food.dart';
 
 class FoodItem extends StatelessWidget {
   final Food food;
-  FoodItem(this.food);
-
+  const FoodItem(this.food, {super.key});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,14 +16,17 @@ class FoodItem extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            padding: EdgeInsets.all(5),
+            padding: const EdgeInsets.all(5),
             width: 110,
             height: 110,
-            child: Image.asset(food.imgUrl, fit: BoxFit.fitHeight),
+            child: Image.asset(
+              food.imgUrl,
+              fit: BoxFit.fitHeight,
+            ),
           ),
           Expanded(
             child: Container(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                 top: 20,
                 left: 10,
                 right: 10,
@@ -37,13 +39,13 @@ class FoodItem extends StatelessWidget {
                     children: [
                       Text(
                         food.name,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                           height: 1.5,
                         ),
                       ),
-                      Icon(
+                      const Icon(
                         Icons.arrow_forward_ios_outlined,
                         size: 15,
                       )
@@ -53,15 +55,15 @@ class FoodItem extends StatelessWidget {
                     food.desc,
                     style: TextStyle(
                       color: food.hightLight
-                          ? kPrimaryColor
+                          ? ccPrimaryColor
                           : Colors.grey.withOpacity(0.8),
                       height: 1.5,
                     ),
                   ),
-                  SizedBox(height: 5),
+                  const SizedBox(height: 5),
                   Row(
                     children: [
-                      Text(
+                      const Text(
                         '\$',
                         style: TextStyle(
                           fontSize: 10,
@@ -70,7 +72,7 @@ class FoodItem extends StatelessWidget {
                       ),
                       Text(
                         '${food.price}',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),

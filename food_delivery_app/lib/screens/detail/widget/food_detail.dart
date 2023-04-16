@@ -5,22 +5,22 @@ import 'package:food_delivery_app/screens/detail/widget/food_quantity.dart';
 
 class FoodDetail extends StatelessWidget {
   final Food food;
-  FoodDetail(this.food);
+  const FoodDetail(this.food, {super.key});
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(25),
-      color: kBackground,
+      padding: const EdgeInsets.all(25),
+      color: ccBackground,
       child: Column(
         children: [
           Text(
             food.name,
-            style: TextStyle(
+            style: const TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 22,
             ),
           ),
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -32,11 +32,11 @@ class FoodDetail extends StatelessWidget {
                   Icons.local_fire_department_outlined, Colors.red, food.cal),
             ],
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           FoodQuantity(food),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           Row(
-            children: [
+            children: const [
               Text(
                 'Ingredients',
                 style: TextStyle(
@@ -46,33 +46,40 @@ class FoodDetail extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 10),
-          Container(
+          const SizedBox(height: 10),
+          SizedBox(
             height: 100,
             child: ListView.separated(
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) => Container(
-                      padding: EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(40),
-                      ),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            food.ingredients[index].values.first,
-                            width: 52,
-                          ),
-                          Text(food.ingredients[index].keys.first),
-                        ],
-                      ),
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) => Container(
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(40),
+                ),
+                child: Column(
+                  children: [
+                    Image.asset(
+                      /// `food.ingredients[index].values.first` is accessing the first value of
+                      /// the key-value pair at the given index in the `ingredients` list of the
+                      /// `food` object. It is used to get the image asset path for the ingredient
+                      /// image in the `ListView` of ingredients.
+                      food.ingredients[index].values.first,
+                      width: 52,
                     ),
-                separatorBuilder: (_, index) => SizedBox(width: 15),
-                itemCount: food.ingredients.length),
+                    Text(
+                      food.ingredients[index].keys.first,
+                    ),
+                  ],
+                ),
+              ),
+              separatorBuilder: (_, index) => const SizedBox(width: 15),
+              itemCount: food.ingredients.length,
+            ),
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           Row(
-            children: [
+            children: const [
               Text(
                 'About',
                 style: TextStyle(
@@ -82,10 +89,10 @@ class FoodDetail extends StatelessWidget {
               )
             ],
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Text(
             food.about,
-            style: TextStyle(
+            style: const TextStyle(
               wordSpacing: 1.2,
               height: 1.5,
               fontSize: 16,
@@ -106,7 +113,7 @@ class FoodDetail extends StatelessWidget {
         ),
         Text(
           text,
-          style: TextStyle(fontSize: 16),
+          style: const TextStyle(fontSize: 16),
         )
       ],
     );

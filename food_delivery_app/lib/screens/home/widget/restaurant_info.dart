@@ -4,11 +4,13 @@ import 'package:food_delivery_app/models/restaurant.dart';
 
 class RestaurantInfo extends StatelessWidget {
   final restaurant = Restaurant.generateRestaurant();
+
+  RestaurantInfo({super.key});
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 40),
-      padding: EdgeInsets.symmetric(horizontal: 25),
+      margin: const EdgeInsets.only(top: 40),
+      padding: const EdgeInsets.symmetric(horizontal: 25),
       child: Column(
         children: [
           Row(
@@ -19,42 +21,50 @@ class RestaurantInfo extends StatelessWidget {
                 children: [
                   Text(
                     restaurant.name,
-                    style: TextStyle(
-                      fontSize: 25,
+                    style: const TextStyle(
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Row(
                     children: [
                       Container(
-                          padding: EdgeInsets.all(5),
-                          decoration: BoxDecoration(
-                            color: Colors.grey.withOpacity(0.4),
-                            borderRadius: BorderRadius.circular(5),
+                        padding: const EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                          color: Colors.blue,
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        child: Text(
+                          restaurant.waitTime,
+                          style: const TextStyle(
+                            color: Colors.white,
                           ),
-                          child: Text(
-                            restaurant.waitTime,
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                          )),
-                      SizedBox(width: 10),
-                      Text(
-                        restaurant.distance,
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.grey.withOpacity(0.4),
                         ),
                       ),
-                      SizedBox(width: 10),
+                      const SizedBox(width: 10),
                       Text(
-                        restaurant.label,
-                        style: TextStyle(
+                        restaurant.distance,
+                        style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
-                          color: Colors.grey.withOpacity(0.4),
+                          color: Colors.black,
+                        ),
+                      ),
+                      const SizedBox(width: 10),
+                      Text(
+                        restaurant.label,
+                        style: const TextStyle(
+                          fontSize: 13,
+                          fontStyle: FontStyle.italic,
+                          shadows: [
+                            Shadow(
+                              color: Colors.white,
+                              offset: Offset(2, 2),
+                            )
+                          ],
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
                         ),
                       )
                     ],
@@ -67,28 +77,28 @@ class RestaurantInfo extends StatelessWidget {
               )
             ],
           ),
-          SizedBox(height: 5),
+          const SizedBox(height: 5),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 '"${restaurant.desc}"',
-                style: TextStyle(fontSize: 16),
+                style: const TextStyle(fontSize: 16),
               ),
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.star_outline,
-                    color: kPrimaryColor,
+                    color: ccPrimaryColor,
                   ),
                   Text(
                     '${restaurant.score}',
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(width: 15),
+                  const SizedBox(width: 15),
                 ],
               )
             ],
